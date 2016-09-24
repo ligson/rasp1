@@ -6,9 +6,9 @@ GPIO.setup(13, GPIO.OUT)
 GPIO.setup(19, GPIO.OUT)
 GPIO.setup(26, GPIO.OUT)
 
-pwm1 = RPi.GPIO.PWM(13, 0)
-pwm2 = RPi.GPIO.PWM(19, 0)
-pwm3 = RPi.GPIO.PWM(26, 0)
+pwm1 = GPIO.PWM(13, 0)
+pwm2 = GPIO.PWM(19, 0)
+pwm3 = GPIO.PWM(26, 0)
 
 pwm1.start(0)
 pwm2.start(0)
