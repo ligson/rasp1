@@ -9,12 +9,12 @@ if __name__ == '__main__':
     print("xxxxx")
     try:
         while True:
-        print "---"
+        print("---")
         GPIO.output(21, GPIO.HIGH)
         time.sleep(1)
         GPIO.output(21, GPIO.LOW)
             time.sleep(1)
     except KeyboardInterrupt:
-        print "正常退出"
+        print("正常退出")
         pass
 GPIO.cleanup()
