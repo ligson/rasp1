@@ -10,7 +10,7 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.OUT)
 
-pwm = RPi.GPIO.PWM(21, 50)
+pwm = GPIO.PWM(21, 50)
 pwm.start(0)
 
 if __name__ == '__main__':
