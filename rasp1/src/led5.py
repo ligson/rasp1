@@ -39,14 +39,8 @@ def loop():
 
 
 if __name__ == '__main__':
-    LED[0] = 1
-    LED[1] = 2
-    LED[2] = 3
-    LED[3] = 4
-    LED[4] = 5
-    LED[5] = 6
-    LED[6] = 7
-    LED[7] = 8
+    for i in xrange(1, 8):
+        LED.append(i)
     n = True
     try:
         while True:
