@@ -11,14 +11,18 @@ RCLK = 19
 SCLK = 26
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(13, GPIO.OUT)
-GPIO.setup(19, GPIO.OUT)
+GPIO.setup(DIO, GPIO.OUT)
+GPIO.setup(RCLK, GPIO.OUT)
+GPIO.setup(SCLK, GPIO.OUT)
+
 GPIO.setup(21, GPIO.OUT)
-GPIO.setup(26, GPIO.OUT)
 
 
 def LED_OUT(ch):
     for i in range(8, 1, -1):
+        print "-----" + str(ch)
+        print str(i)
+        print str(ch & 0x80)
         if ch & 0x80:
             GPIO.output(DIO, True)
         else:
